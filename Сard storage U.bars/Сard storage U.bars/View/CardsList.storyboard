@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3f4-wR-dOC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cards List View Controller-->
+        <scene sceneID="D2O-y1-zff">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jci-Os-rKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableViewController storyboardIdentifier="CardsListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3f4-wR-dOC" customClass="CardsListViewController" customModule="Сard_storage_U_bars" customModuleProvider="target" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="64" y="1"/>
+        </scene>
+        <!--Card Info View Controller-->
+        <scene sceneID="KXD-cJ-b0p">
+            <objects>
+                <viewController storyboardIdentifier="CardInfoVC" id="AWH-B9-NUm" customClass="CardInfoViewController" customModule="Сard_storage_U_bars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bg8-Rf-wd7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7Y-Je-1q2" userLabel="CardBG">
+                                <rect key="frame" x="16" y="328" width="382" height="240"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercard" translatesAutoresizingMaskIntoConstraints="NO" id="Pg3-BY-O0s" userLabel="CardType">
+                                        <rect key="frame" x="302" y="135" width="60" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Iql-QV-ue5"/>
+                                            <constraint firstAttribute="width" constant="60" id="gRC-qG-zFs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RD8-gp-9Aa" userLabel="BankName">
+                                        <rect key="frame" x="20" y="50" width="59" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**** 1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjN-me-Lwu" userLabel="CardNumber">
+                                        <rect key="frame" x="20" y="145.5" width="84" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="mastercard"/>
+                                <constraints>
+                                    <constraint firstItem="RD8-gp-9Aa" firstAttribute="top" secondItem="a7Y-Je-1q2" secondAttribute="top" constant="50" id="9Wx-C5-Gtt"/>
+                                    <constraint firstItem="RD8-gp-9Aa" firstAttribute="leading" secondItem="a7Y-Je-1q2" secondAttribute="leading" constant="20" id="EMg-ZX-U0U"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pg3-BY-O0s" secondAttribute="bottom" constant="60" id="TZp-bP-bey"/>
+                                    <constraint firstItem="Pg3-BY-O0s" firstAttribute="centerY" secondItem="hjN-me-Lwu" secondAttribute="centerY" id="YO3-MT-okl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pg3-BY-O0s" secondAttribute="trailing" constant="20" id="i9J-Lv-gHb"/>
+                                    <constraint firstAttribute="height" constant="240" id="kLe-SW-ESp"/>
+                                    <constraint firstItem="hjN-me-Lwu" firstAttribute="leading" secondItem="a7Y-Je-1q2" secondAttribute="leading" constant="20" id="n5z-Zh-gnW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9p1-Gb-CAe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a7Y-Je-1q2" firstAttribute="centerY" secondItem="Bg8-Rf-wd7" secondAttribute="centerY" id="aQE-DE-PlW"/>
+                            <constraint firstItem="9p1-Gb-CAe" firstAttribute="trailing" secondItem="a7Y-Je-1q2" secondAttribute="trailing" constant="16" id="b0v-CQ-7hx"/>
+                            <constraint firstItem="a7Y-Je-1q2" firstAttribute="leading" secondItem="9p1-Gb-CAe" secondAttribute="leading" constant="16" id="eBg-KL-VYq"/>
+                            <constraint firstItem="a7Y-Je-1q2" firstAttribute="centerX" secondItem="Bg8-Rf-wd7" secondAttribute="centerX" id="qXf-RK-k7d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bankNameOutlet" destination="RD8-gp-9Aa" id="PPB-g9-rsM"/>
+                        <outlet property="cardBGOutlet" destination="a7Y-Je-1q2" id="lf7-bI-0XD"/>
+                        <outlet property="cardNumberOutlet" destination="hjN-me-Lwu" id="DaE-QQ-LWh"/>
+                        <outlet property="cardTypeImage" destination="Pg3-BY-O0s" id="MHd-Ad-RnY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQ9-Of-ggl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="1"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mastercard" width="40" height="30"/>
+        <namedColor name="mastercard">
+            <color red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
